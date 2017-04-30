@@ -312,6 +312,9 @@ public class EntityFluidCow extends EntityCow implements IEntityAdditionalSpawnD
   }
 
   public void setEntityFluid(final Fluid entityFluid) {
+    if (entityFluid == null) {
+      this.setDead();
+    }
     this.entityFluid = entityFluid;
   }
 
